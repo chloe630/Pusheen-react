@@ -7,14 +7,17 @@ import AllPusheens from './components/AllPusheens';
 import OnePusheen from './components/OnePusheen';
 
 /** Below we need:
-* 1. a path to see a list of all the AllPusheens
-* 2. a path to see one Pusheen
-*/
+ * 1. a path to see a list of all the AllPusheens
+ * 2. a path to see one Pusheen
+ */
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path='/' component={App}>
+      <Route path='/allPusheens' component = { AllPusheens } />
+      <Route path='/singlePusheen' component={ OnePusheen } />
     </Route>
   </Router>,
+
   document.getElementById('app')
 );
